@@ -3,6 +3,7 @@
 #define PI acos(-1.0)
 int main()
 {
+    /*
     // 1-1 average
     printf("1-1 average\n");
     double numA,numB,numC;
@@ -29,26 +30,26 @@ int main()
     printf("1-4 sin & cos\n");
     scanf("%d", &n);
     double rad = (n * PI) /180;
-    printf("% f %f %f", rad, sin(rad), cos(rad));
+    printf("rad=%f PI=%f sin=%f cos=%f", rad, PI, sin(rad), cos(rad));
     printf("\n\n");
 
     // 1-5 discount
     printf("1-5 discount\n");
     int numb;
     scanf("%d", &numb);
-    if(numb * 95 >= 300) printf("%f", (numb * 95 * 0.85));
+    if(numb * 95 >= 300) printf("%.2f", (numb * 95 * 0.85));
     else printf("%.2f", numb * 95);
     printf("\n\n");
-
+*/
     // 1-6 triangle
     printf("1-6 triangle\n");
-    int edgeA,edgeB,edgeC,temp;
-    scanf("%d%d%d", &edgeA, &edgeB, &edgeC);
+    double edgeA,edgeB,edgeC,temp;
+    scanf("%f%f%f", &edgeA, &edgeB, &edgeC);
     if(edgeA > edgeB) {temp = edgeA; edgeA = edgeB; edgeB = temp;}
     if(edgeA > edgeC) {temp = edgeA; edgeA = edgeC; edgeC = temp;}
     if(edgeB > edgeC) {temp = edgeB; edgeB = edgeC; edgeC = temp;}
-    if(pow(edgeA, 2) + pow(edgeB, 2) > pow(edgeC, 2)) {
-        if(pow(edgeA, 2) + pow(edgeB, 2) == pow(edgeC, 2)) {
+    if(pow(edgeA, 2) + pow(edgeB, 2) >= pow(edgeC, 2)) {
+      if(pow(edgeA, 2) + pow(edgeB, 2) == pow(edgeC, 2)) {
             printf("yes");
         }
     } else {
@@ -57,7 +58,7 @@ int main()
     printf("\n\n");
 
     // 1-7 year
-    printf("1-7 year\n")
+    printf("1-7 year\n");
     int year;
     scanf("%d", &year);
     printf("yes");
