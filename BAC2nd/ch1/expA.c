@@ -1,3 +1,6 @@
+//
+// Created by Gary on 2020/11/8.
+//
 #include<stdio.h>
 #include<math.h>
 int main()
