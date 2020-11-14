@@ -17,8 +17,11 @@ strchr(str, c): 在一个字符串中查找单个字符;在字符串str中寻找
 sprintf: 输出到字符串，应该保证写入的字符串有足够的空间
 > 至少字符个数加1，因为C语言的字符串是以空字符 “\0”结尾的
 strlen: 获取字符串的实际长度，就是结束标记之前的字符个数
+
 > 变量在赋值之前是不确定的
+
 strcpy,strcmp,strcat: 赋值、比较和连接(string.h)
+
 ```C
     int count = 0;
     printf("%d %d %d", count++, count++, count++);
