@@ -1,32 +1,33 @@
-#include <stdio.h>
-
-int main() {
-    int N,weight=0, remain=0;
-    double money;
-    scanf("%d", &N);
-    printf("%d\n", N);
-    for (int i = 0; i < N; ++i) {
-        printf("%d\n",i);
-        char type;
-        int gram;
-        double price;
-        scanf("%c %d %lf",&type,&gram,&price);
-        printf("%c\n%d\n%lf\n",type,gram,price);
-        if (type == 'R')
-        {
-            if (gram > 200)
-            {
-                money += (gram -200) * price;
-            }
-        } else
-        {
-            money += price * gram;
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    double ans=0;
+    double m=0;
+    double mva=0;
+    double res=0;
+    double allv=0;
+    for(int i=0;i<n;i++){
+        char s;
+        double v,va;
+        getchar();
+        scanf("%c %lf %lf",&s,&v,&va);
+        allv+=v;
+        if(s=='R'){
+            m+=v;
+            mva=va;
+        }else{
+            ans+=v/100.0*va;
         }
-        weight += gram;
+
     }
-    scanf("%d", &remain);
-    if (remain <= weight/20) {
-        money *= 0.9;
+    scanf("%lf",&res);
+    if(m-200.0>=0.1){
+        ans+=(m-200.0)/100*mva;
     }
-    printf("%.2lf", money);
+    if(res*20<=allv){
+        ans*=0.9;
+    }
+    printf("%.2lf",ans);
+    return 0;
 }
