@@ -29,3 +29,6 @@ strcpy,strcmp,strcat: 赋值、比较和连接(string.h)
     // output
     2 1 0
 ```
+
+#### 3-6
+环状序列
